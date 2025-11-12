@@ -5,7 +5,7 @@ A comprehensive web-based application for IT Security professionals to manage, t
 ## ✨ Features
 
 - **42 Security Tasks** across 7 categories
-- **Real-time Progress Tracking**
+- **Real-time Progress Tracking** 
 - **Task Management** with notes
 - **CSV Export** for reporting
 - **Beautiful Responsive UI**
@@ -14,7 +14,7 @@ A comprehensive web-based application for IT Security professionals to manage, t
 ## 🏗️ Architecture
 
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Backend**: n8n workflows
+- **Backend**: n8n workflows  
 - **Database**: PostgreSQL
 - **APIs**: RESTful endpoints
 
@@ -27,13 +27,13 @@ A comprehensive web-based application for IT Security professionals to manage, t
 
 ### Installation
 1. Set up n8n workflows from `/n8n-workflows/`
-2. Import database schema from `/database/schema.sql`
-3. Open `/frontend/index.html` in browser
+2. Import database schema from `/database/`
+3. Open `index.html` in browser
 
 ## 📊 APIs
 
 - `GET /security-tasks` - Get all tasks
-- `POST /update-task` - Update task status
+- `POST /update-task` - Update task status  
 - `GET /progress` - Get progress stats
 - `GET /export` - Export CSV report
 
