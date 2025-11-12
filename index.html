@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Security Weekly Checklist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-shield-alt"></i> IT Security Weekly Checklist</h1>
+                <div class="header-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="overallProgress">0%</span>
+                        <span class="stat-label">Overall Progress</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="completedTasks">0</span>
+                        <span class="stat-label">Completed Tasks</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="totalTasks">42</span>
+                        <span class="stat-label">Total Tasks</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter" id="categoryFilter">
+            <!-- Categories will be loaded here -->
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading checklist...
+        </div>
+
+        <!-- Tasks Container -->
+        <div class="tasks-container" id="tasksContainer">
+            <!-- Tasks will be loaded here -->
+        </div>
+
+        <!-- Export Button -->
+        <div class="export-section">
+            <button class="export-btn" onclick="exportToCSV()">
+                <i class="fas fa-download"></i> Export to CSV
+            </button>
+        </div>
+    </div>
+
+    <!-- Notes Modal -->
+    <div id="notesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNotesModal()">&times;</span>
+            <h3>Task Notes</h3>
+            <textarea id="notesTextarea" placeholder="Add your notes or findings here..."></textarea>
+            <div class="modal-actions">
+                <button onclick="saveNotes()" class="btn-primary">Save Notes</button>
+                <button onclick="closeNotesModal()" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
