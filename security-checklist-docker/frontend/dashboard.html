@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Automation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-grid"><div class="grid-pattern"></div></div>
+    <header id="main-header">
+        <nav>
+            <div class="logo">
+                <img src="dark-desicrew.png" alt="Logo" style="height: 32px; border-radius: 4px;">
+                <span>AD Dashboard</span>
+            </div>
+            <button class="btn-primary" onclick="window.location.href='index.html'">View Checklist</button>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 80px;">
+        <!-- Header -->
+        <div id="dashboard" class="section-header" style="margin-bottom: 2rem; animation: fadeIn 1s ease-out;">
+            <h1 class="section-title hero-gradient-text">AD Automation Dashboard</h1>
+            <p class="section-description">Real-time monitoring of the AD Automation System.</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid" style="margin-bottom: 2rem; animation: fadeIn 1s ease-out 0.2s;">
+            <div class="stat-item"><div id="users-created" class="stat-number">0</div><div class="stat-label">Users Created</div></div>
+            <div class="stat-item"><div id="passwords-reset" class="stat-number">0</div><div class="stat-label">Passwords Reset</div></div>
+            <div class="stat-item"><div id="users-disabled" class="stat-number">0</div><div class="stat-label">Users Disabled</div></div>
+            <div class="stat-item"><div id="domain-unlocks" class="stat-number">0</div><div class="stat-label">Domain Unlocks</div></div>
+            <div class="stat-item"><div id="system-status" class="stat-number">--</div><div class="stat-label">System Status</div></div>
+            <div class="stat-item"><div id="pending-approval" class="stat-number">0</div><div class="stat-label">Pending Manager Approval</div></div>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid" style="animation: fadeIn 1s ease-out 0.4s;">
+            <div id="automation-status-card" class="service-card">
+                <h3 class="service-title"><i class="fas fa-cogs service-icon"></i> Automation Service</h3>
+                <p><strong>State:</strong> <span id="task-state">--</span></p>
+                <p><strong>Last Run:</strong> <span id="last-run-time">--</span></p>
+                <p><strong>Next Run:</strong> <span id="next-run-time">--</span></p>
+                <p><strong>Result:</strong> <span id="last-task-result">--</span></p>
+            </div>
+            <div id="freshservice-card" class="service-card">
+                <h3 class="service-title"><i class="fas fa-headset service-icon"></i> Freshservice</h3>
+                <p><strong>API Status:</strong> <span id="fs-api-status">--</span></p>
+                <p><strong>Open Tickets:</strong> <span id="fs-open-tickets">0</span></p>
+                <p><strong>Total Runs (24h):</strong> <span id="fs-total-runs">0</span></p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title"><i class="fas fa-info-circle service-icon"></i> System Info</h3>
+                <p><strong>Server:</strong> <span id="info-server">--</span></p>
+                <p><strong>Domain:</strong> <span id="info-domain">--</span></p>
+                <p><strong>Uptime:</strong> <span id="info-uptime">--</span></p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title"><i class="fas fa-users service-icon"></i> AD Stats</h3>
+                <div class="ad-stats-box">
+                    <p><strong>Total:</strong> <span id="ad-total-users">0</span></p>
+                    <p><strong>Enabled:</strong> <span id="ad-enabled-users">0</span></p>
+                    <p><strong>Disabled:</strong> <span id="ad-disabled-users">0</span></p>
+                    <p><strong>Locked:</strong> <span id="ad-locked-users">0</span></p>
+                </div>
+            </div>
+
+            <!-- Manager Approval Card -->
+            <div id="manager-approval-card" class="service-card">
+                <h3 class="service-title"><i class="fas fa-user-check service-icon"></i> Manager Approval</h3>
+                <p><strong>Last Approved Ticket:</strong> <span id="last-approved-ticket">--</span></p>
+                <p><strong>Approved By:</strong> <span id="last-approved-by">--</span></p>
+                <p><strong>Approval Time:</strong> <span id="last-approved-time">--</span></p>
+            </div>
+
+            <div class="service-card" style="grid-column: 1 / -1;">
+                <h3 class="service-title"><i class="fas fa-history service-icon"></i> Recent Activity</h3>
+                <div id="log-list" class="log-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

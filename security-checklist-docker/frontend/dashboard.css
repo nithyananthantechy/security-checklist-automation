@@ -1,0 +1,105 @@
+/* Dashboard-specific styles */
+
+/* General panel styling is handled by style.css .panel class */
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem; /* Consistent with style.css */
+    margin-bottom: 2rem;
+}
+
+/* Card Specifics (relying on .service-card from style.css) */
+/* These border-top styles are specific to the old design and should be removed or re-evaluated */
+/* .card.success { border-top: 6px solid var(--success-color); } */
+/* .card.warning { border-top: 6px solid var(--warning-color); } */
+/* .card.danger { border-top: 6px solid var(--danger-color); } */
+/* .card.info { border-top: 6px solid #17a2b8; } */
+/* .card.primary { border-top: 6px solid #667eea; } */
+
+/* Stats Grid Layout */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Consistent with style.css */
+    gap: 1.5rem; /* Consistent with style.css */
+    margin: 2rem 0;
+}
+
+/* Stat Box (relying on .stat-item from style.css) */
+/* .stat-box.panel { color: white; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.2); } */
+/* .stat-number { font-size: 2.5em; font-weight: bold; margin: 10px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); } */
+/* .stat-label { font-size: 0.9em; opacity: 0.9; margin-bottom: 5px; font-weight: 500; } */
+
+/* Headings and Paragraphs (relying on global styles) */
+/* h1, h2, h3 { color: var(--text-primary); margin-bottom: 15px; } */
+/* h1 { font-size: 2.5em; font-weight: 700; } */
+/* h2 { font-size: 1.6em; font-weight: 600; } */
+/* h3 { font-size: 1.3em; font-weight: 600; } */
+/* p { margin: 10px 0; color: var(--text-secondary); line-height: 1.6; } */
+
+/* Status Badges (relying on global styles) */
+/* .status-badge { display: inline-block; padding: 6px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 600; margin-left: 8px; } */
+/* .status-success { background: var(--success-color); color: #000; } */
+/* .status-warning { background: var(--warning-color); color: #000; } */
+/* .status-error { background: var(--danger-color); color: #fff; } */
+/* .status-info { background: #17a2b8; color: white; } */
+
+/* Log List */
+.log-list {
+    max-height: 250px; /* Adjusted for better fit */
+    overflow-y: auto;
+    border: 1px solid #1e293b; /* Consistent with new theme */
+    border-radius: 0.5rem; /* Consistent with new theme */
+    padding: 1rem; /* Consistent with new theme */
+    background: rgba(15, 23, 42, 0.5); /* Consistent with new theme */
+}
+.log-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #1e293b; /* Consistent with new theme */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.log-item:last-child { border-bottom: none; }
+.log-time { color: #9ca3af; /* Consistent with new theme */ font-size: 0.875rem; min-width: 80px; }
+.log-action { font-weight: 500; color: #e5e7eb; /* Consistent with new theme */ flex-grow: 1; margin: 0 1rem; font-size: 0.9rem; }
+.log-status { 
+    padding: 0.25rem 0.75rem; 
+    border-radius: 9999px; 
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.log-success { background: #22c55e; color: #1e293b; } /* Consistent with new theme */
+.log-error { background: #ef4444; color: white; } /* Consistent with new theme */
+.log-warning { background: #eab308; color: #1e293b; } /* Consistent with new theme */
+
+/* Refresh Info (relying on .service-card from style.css) */
+/* .refresh-info.panel { text-align: center; } */
+/* .api-status { display: inline-flex; align-items: center; gap: 6px; } */
+/* .pulse { animation: pulse 2s infinite; } */
+/* @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } } */
+
+.ad-stats-box {
+    background: rgba(15, 23, 42, 0.8); /* Consistent with new theme */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Removed redundant styles that are now handled by style.css */
+/* .card.panel.success, .card.panel.primary, .card.panel.info, .card.panel.warning, .card.panel.danger { border-top: none; border-left: 6px solid ...; } */
+/* .stat-box.panel { background: var(--panel-bg); } */
+/* .stat-number { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } */
+/* .stat-label { color: var(--text-muted); } */
+/* .refresh-info.panel { background: var(--panel-bg); } */
+/* .refresh-info div { color: var(--text-secondary); } */
+/* .pulse { color: var(--success-color); } */
+/* .card.panel h3 { color: var(--text-primary); } */
+/* .card.panel p { color: var(--text-secondary); } */
+/* .log-list { background: rgba(0,0,0,0.3); } */
+/* .log-action { color: var(--text-primary); } */
+/* .log-time { color: var(--text-muted); } */
+/* .ad-stats-box { background: rgba(0,0,0,0.3); } */
+/* .card.panel.primary p { display: flex; align-items: center; gap: 10px; } */
+/* .card.panel.primary p strong { font-size: 1.2rem; } */

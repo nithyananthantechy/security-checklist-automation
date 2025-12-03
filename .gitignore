@@ -1,0 +1,11 @@
+# IDE and OS files
+.idea/
+*.iml
+.DS_Store
+
+# Secrets
+security-checklist-docker/.env
+
+# Docker volumes (local data)
+security-checklist-docker/postgres_data/
+security-checklist-docker/n8n_data/

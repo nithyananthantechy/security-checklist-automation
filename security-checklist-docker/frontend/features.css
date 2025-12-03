@@ -1,0 +1,107 @@
+/* Styles for specific features */
+
+/* Task Notes Display */
+.task-notes-display {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(0,0,0,0.2);
+    border-left: 3px solid #60a5fa;
+    border-radius: 0.25rem;
+}
+.task-notes-display i {
+    margin-right: 0.5rem;
+    color: #60a5fa;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to right, #2563eb, #0891b2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.back-to-top:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Compact View */
+.compact-view .task-item {
+    padding: 0.75rem;
+    gap: 0.75rem;
+}
+.compact-view .task-header {
+    margin-bottom: 0.25rem;
+}
+.compact-view .task-name {
+    font-size: 0.9rem;
+}
+.compact-view .task-description {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.compact-view .task-notes-display {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+}
+.compact-view .btn-notes {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+}
+.compact-view .category-section {
+    padding: 1rem;
+}
+.compact-view .category-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+}
+.compact-view .category-title {
+    font-size: 1.1rem;
+}
+.compact-view .category-progress {
+    font-size: 0.8rem;
+}
+.compact-view .control-center {
+    padding: 1rem;
+    gap: 1rem;
+}
+.compact-view .quick-actions {
+    padding-bottom: 1rem;
+}
+.compact-view .filters-section {
+    padding-bottom: 1rem;
+}
+.compact-view .filter-options select,
+.compact-view .search-box input,
+.compact-view .btn-secondary {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+.compact-view .category-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+}
+.compact-view .stats-grid .stat-item {
+    padding: 1rem;
+}
+.compact-view .stat-number {
+    font-size: 2rem;
+}
+.compact-view .stat-label {
+    font-size: 0.75rem;
+}
