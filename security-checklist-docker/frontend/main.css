@@ -1,0 +1,144 @@
+/* ===================================
+   MAIN.CSS - SHARED STYLES
+   (For index.html & dashboard.html)
+   =================================== */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #020617;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Animated Background Grid */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Styles */
+#main-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#main-header.scrolled {
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.logo img {
+  filter: brightness(1.5) drop-shadow(0 0 5px rgba(255,255,255,0.3));
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(to right, #2563eb, #0891b2);
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #1d4ed8, #0e7490);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: rgba(15, 23, 42, 0.8);
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-secondary:hover { background-color: #1e293b; }
+
+/* Section Header Styles */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-gradient-text {
+  background: linear-gradient(to right, #60a5fa, #22d3ee, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-description {
+  color: #9ca3af;
+  font-size: 1.125rem;
+  max-width: 60ch;
+  margin: 0 auto;
+}
